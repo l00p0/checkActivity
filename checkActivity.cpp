@@ -17,9 +17,9 @@ int main(int argc, char* argv[])
 {
 	//possible command params
 	
-	unsigned long timeoutSec = 30; // after this limit is reached machine is available
+	unsigned long timeoutSec = 293; // ~5 mins +/- sleepSec // after this limit is reached machine is available
 	std::string outputfileName;   // outputfile that will contain either FREE or BUSY
-	unsigned int sleepSec = 30;   // how often to check if we're busy or not.
+	unsigned int sleepSec = 15;   // how often to check if we're busy or not.
 
 	//internal variables
 	DWORD currentTick;   // check current tick against lastinputinfo tick
@@ -29,10 +29,7 @@ int main(int argc, char* argv[])
 	DWORD timeoutInTicks = timeoutSec*1000; 
 
 	outputfileName = "freebusy.dat";
-	if (argc == 1) {
-		//outputfile
-	}
-
+	
 	std::ofstream ofile;
 
 	//stop us from uneccesarily writing file with same info
@@ -81,4 +78,3 @@ int main(int argc, char* argv[])
 	}
     return 0;
 }
-
