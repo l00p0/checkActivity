@@ -11,11 +11,15 @@ This can be checked by an indicator application that can tell potential users th
 In our case the indicator is part of a web-app that will regularly poll the output file and tell users the current state.
 
 In its current form the program will output to a file called freebusy.dat in the current directory. 
-This is fine for my current use-case. 
-Even if I wanted to monitor several machines I would simply call the exe from several different paths.
+This is fine for our current use-case. 
+Even if we wanted to monitor several machines we would simply call the exe from several different paths.
+
+
 e.g. where Z: is mapped network share
-cd Z:\some\path\machine1\
-c:\path\to\exe\checkActivity.exe 
+
+    cd Z:\some\path\machine1\
+    c:\path\to\exe\checkActivity.exe 
+
      
      
 and poll those locations knowing which machine corresponds to which path.
